@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Custom Objects & Fields -->
+    <types>
+        <members>Support_Ticket_Intelligence__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Support_Ticket_Intelligence__c.Account__c</members>
+        <members>Support_Ticket_Intelligence__c.Assigned_To__c</members>
+        <members>Support_Ticket_Intelligence__c.Contact__c</members>
+        <members>Support_Ticket_Intelligence__c.Created_Date__c</members>
+        <members>Support_Ticket_Intelligence__c.Customer__c</members>
+        <members>Support_Ticket_Intelligence__c.Description__c</members>
+        <members>Support_Ticket_Intelligence__c.Issue_Type__c</members>
+        <members>Support_Ticket_Intelligence__c.Priority_Level__c</members>
+        <members>Support_Ticket_Intelligence__c.Resolution_Time__c</members>
+        <members>Support_Ticket_Intelligence__c.SLA_Breach_Risk__c</members>
+        <members>Support_Ticket_Intelligence__c.Status__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Support_Ticket_Intelligence__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Support_Ticket_Intelligence__c-Support Ticket Intelligence Layout</members>
+        <name>Layout</name>
+    </types>
+
+    <!-- Flows -->
+    <types>
+        <members>Support_Ticket_Intellegence</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Support_Ticket_Intellegence</members>
+        <name>FlowDefinition</name>
+    </types>
+
+    <!-- Agentforce Subagent (Topic) and Action -->
+    <types>
+        <members>Support_Ticket_Priority_Analysis</members>
+        <name>GenAiPlugin</name>
+    </types>
+    <types>
+        <members>Support_Ticket_Intelligence</members>
+        <name>GenAiFunction</name>
+    </types>
+
+    <version>62.0</version>
+</Package>

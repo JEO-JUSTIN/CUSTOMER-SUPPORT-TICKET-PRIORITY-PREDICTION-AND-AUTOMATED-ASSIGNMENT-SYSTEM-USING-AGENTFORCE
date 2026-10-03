@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This topic analyzes customer support tickets to determine priority based on issue description and urgency. It handles user requests related to ticket status, issue severity, and support prioritization.</description>
+    <developerName>Support_Ticket_Priority_Analysis</developerName>
+    <genAiFunctions>
+        <functionName>Support_Ticket_Intelligence</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Your job is only to analyze support ticket descriptions, determine the priority level (High, Medium, Low), and trigger backend automation for task assignment. Do not handle unrelated requests such as billing, subscription management, or account updates.</description>
+        <developerName>scope_instruction</developerName>
+        <language>en_US</language>
+        <masterLabel>Scope Instruction</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Follow these steps when this topic is triggered:
+1. Ask the user to provide the Account Name if not already given.
+2. Retrieve the latest support ticket associated with the Account.
+3. Read and analyze the ticket description.
+4. Determine priority based on keywords:
+   - High Priority: contains &quot;urgent&quot;, &quot;not working&quot;, &quot;failure&quot;
+   - Medium Priority: contains &quot;issue&quot;, &quot;slow&quot;, &quot;delay&quot;
+   - Low Priority: if none of the above
+5. Set the priority level accordingly.
+6. If the ticket is High Priority:
+   - Trigger the Auto-Launched Flow
+   - Ensure a task is created for immediate handling
+7. Assign the ticket to the appropriate support level (e.g., senior agent for high priority).
+8. Return a clear response message to the user:
+   - High -&gt; Inform urgent handling is initiated
+   - Medium -&gt; Inform issue will be handled shortly
+   - Low -&gt; Inform ticket is queued
+9. Do not update records directly or send emails. Use Flow for all actions.</description>
+        <developerName>topic_instructions</developerName>
+        <language>en_US</language>
+        <masterLabel>Topic Instructions</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Support Ticket Priority Analysis</masterLabel>
+    <pluginType>Topic</pluginType>
+</GenAiPlugin>
